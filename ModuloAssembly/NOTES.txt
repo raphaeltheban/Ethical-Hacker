@@ -1,0 +1,23 @@
+74E54FB0 = endereço da chamada cmd.exe
+
+msvcrt.dll
+
+cmd.exe = 63 6D 64 2E 65 78 65
+exe.dmc = 65 78 65 2E 64 6D 63
+exe. = 65 78 65 2E
+dmc = 64 6D 63 00
+
+exe. = 657865
+dmc = 2E646D63
+
+
+criar programa 
+abrir calculadora cmd.exe /c calc.exe
+
+cmd.exe /c calc.exe 63 6D 64 2E 65 78 65 20 2F 63 20 63 61 6C 63 2E 65 78 65
+
+6578652E
+636C6163
+20632F20
+65786500
+2E646D63
