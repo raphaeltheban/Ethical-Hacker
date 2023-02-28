@@ -103,75 +103,75 @@ Mostra a rota atual e o GATEWAY
 
     #route del default
 
-delete a rota (GATEWAY) do adaptador de rede
+Delete a rota (GATEWAY) do adaptador de rede
 
     #route add default gw 192.168.1.1
 
-         Adiciona o IP da rota default
+Adiciona o IP da rota default
 
     #netstat 
 
-        Status da rede (detalhadamente usando as flags)
+Status da rede (detalhadamente usando as flags)
 
     #netstat -lntp
 
-        Lista os serviços Portas Nomes no protocolo TCP rodando atualmente
+ Lista os serviços Portas Nomes no protocolo TCP rodando atualmente
 
     #service ssh start/stop/restart
 
-        Inicia ou para o serviço de SSH
+Inicia ou para o serviço de SSH
 
     #vi
 
-        leitor de texto. I: Insere dados; DD: Deleta a linha; WQ: Sai salvando; Q!: Sai sem salvar 
+Leitor de texto. I: Insere dados; DD: Deleta a linha; WQ: Sai salvando; Q!: Sai sem salvar 
 
     #apt search php
 
-        procure por opções de instalação do programa informado
+Procure por opções de instalação do programa informado
 
     #dpkg -l
 
-        exibe os pacotes .deb instalados com o DPKG
+Exibe os pacotes .deb instalados com o DPKG
 
     #update-rc.d ssh enable
 
-        habilita permanente o serviço ssh
+Habilita permanente o serviço ssh
 
     #locate #find /pasta/ -name #whereis #which 
 
-        Buscadores de arquivos/programas (updatedb atualiza base)
+Buscadores de arquivos/programas (updatedb atualiza base)
 
     #grep "procura" /arquivo/
 
-        Busca procura no arquivo e exibe a linha
+Busca procura no arquivo e exibe a linha
 
     #grep -v "procura" /arquivo/ 
 
-        Exibe o que não tem procura no arquivo e exibe a linha
+Exibe o que não tem procura no arquivo e exibe a linha
 
     #grep -r "palavra dentro do arquivo" 
 
-        Procura dentro dos arquivos dos diretórios as palavras nas "
+Procura dentro dos arquivos dos diretórios as palavras nas "
 
     #awk -F : '{print "O usuario " $1 " Tem dir " $6}' /etc/passwd
 
-        Procura avançada no arquivo
+Procura avançada no arquivo
 
     #cut -d : -f1,6 /etc/passwd 
 
-        faz os mesmo do comando acima
+Faz os mesmo do comando acima
 
     #sed 's/troca/porisso' do arquivo.txt 
 
-        faz substituição de nomes nos arquivos usar ^ para add algo no início da cada linha
+Faz substituição de nomes nos arquivos usar ^ para add algo no início da cada linha
 
     #ls -la 
 
-        Exibe os arquivos ocultos
+Exibe os arquivos ocultos
 
     #rm -rf nome-da-pasta 
 
-        Remove todos os arquivos da pasta
+Remove todos os arquivos da pasta
 
 
     DOMINANDO O PROMPT DE COMANDO WINDOWS
