@@ -81,29 +81,29 @@ VPN
 
 Configurar a VPN para autenticar automaticamente usando login e senha em um arquivo externo, sendo lido pelo .ovpn. Na linha auth-user-pass informe o arquivo com as credenciais. Ex.: auth-user-pass credenciais
 
-    DOMINANDO TERMINAL LINUX
+DOMINANDO TERMINAL LINUX
 
 Tags: comandos terminal | comandos linux
 
     #ifconfig eth0 192.168.2.50 netmask 255.255..
 
-         modifica o IP até reiniciar a máquina
+modifica o IP até reiniciar a máquina
 
     #nano /etc/network/interfaces
 
-        arquivo de configuração das interfaces de redes
+arquivo de configuração das interfaces de redes
 
     #/etc/init.d/networking/ restart
 
-        reinicia o adaptador de rede para as configurações padrão PORÉM apenas se no arquivo interfaces estiver com DHCP, caso esteja com STATIC irá pegar o IP de lá.
+reinicia o adaptador de rede para as configurações padrão PORÉM apenas se no arquivo interfaces estiver com DHCP, caso esteja com STATIC irá pegar o IP de lá.
 
     #route -n M
 
-        ostra a rota atual e o GATEWAY
+Mostra a rota atual e o GATEWAY
 
     #route del default
 
-        delete a rota (GATEWAY) do adaptador de rede
+delete a rota (GATEWAY) do adaptador de rede
 
     #route add default gw 192.168.1.1
 
